@@ -55,3 +55,12 @@ A variável `cardNumber` pode ser substituída pelo número real do cartão que 
 -   **discover: válido**
 -   diners: inválido
 -   **jcb: válido**
+
+**Alterações no código:**
+
+-   Colocar as iniciais das bandeiras em Maiúsculo
+-   Adicionar nome composto para as bandeiras: amex e diners.
+    -   **Exemplo:** “Diners Club” e “American Express”
+-   Traduzir as mensagem de resposta para português
+    -   Valid card number, Card issuer (Bandeira) e Invalid card number.
+    -   Número de cartão válido, Emissor do cartão (Bandeira) e Número de cartão inválido.

@@ -20,12 +20,12 @@ function validateCreditCardNumber(cardNumber) {
 // Function to determine the card issuer (Bandeira)
 function getCardIssuer(cardNumber) {
     const cardPatterns = {
-        visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
-        mastercard: /^5[1-5][0-9]{14}$/,
-        amex: /^3[47][0-9]{13}$/,
-        discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
-        diners: /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/,
-        jcb: /^(?:2131|1800|35\d{3})\d{11}$/
+        Visa: /^4[0-9]{12}(?:[0-9]{3})?$/,
+        Mastercard: /^5[1-5][0-9]{14}$/,
+        "American Express": /^3[47][0-9]{13}$/,
+        Discover: /^6(?:011|5[0-9]{2})[0-9]{12}$/,
+        "Diners Club": /^3(?:0[0-5]|[68][0-9])[0-9]{11}$/,
+        JCB: /^(?:2131|1800|35\d{3})\d{11}$/
     };
 
     for (let issuer in cardPatterns) {
@@ -39,8 +39,8 @@ function getCardIssuer(cardNumber) {
 // Example usage
 const cardNumber = '4111111111d111111'; // Replace with actual card number
 if (validateCreditCardNumber(cardNumber)) {
-    console.log('Valid card number');
-    console.log('Card issuer (Bandeira):', getCardIssuer(cardNumber));
+    console.log('Número de cartão válido');
+    console.log('Emissor do cartão (Bandeira):', getCardIssuer(cardNumber));
 } else {
-    console.log('Invalid card number');
+    console.log('Número de cartão inválido');
 }
