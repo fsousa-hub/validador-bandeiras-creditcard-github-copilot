@@ -108,3 +108,39 @@ O código foi ajustado para permitir 13 a 19 dígitos.
 const regex = new RegExp("^[0-9]{13,19}$");
 
 ```
+
+
+### **Adicionar bandeiras que faltaram:**
+
+-   Elo
+-   Hipercard
+
+**Script GitHUb Copilot:** adicione ao código a válidação das bandeiras ‘Elo’ e ‘Hipercad’
+
+**Resultado:**
+
+```jsx
+Elo: /^((636368)|(438935)|(504175)|(451416)|(636297)|(5067)|(4576)|(4011)|(506699))[0-9]{0,10}$/,
+Hipercard: /^(606282|3841)[0-9]{5,}$/,
+
+```
+
+### **Adicionar bandeiras solicitadas para o desafio de projeto:**
+
+-   EnRoute
+-   Voyager
+-   Aura
+
+**Script GitHUb Copilot:** adicione também ao código a válidação das bandeiras ‘EnRoute’,  ‘Voyager’ e 'Aura'.
+
+**Resultado:**
+
+```jsx
+EnRoute: /^(2014|2149)\\d{11}$/,
+Voyager: /^8699[0-9]{11}$/,
+Aura: /^50[0-9]{14,17}$/
+
+```
+
+----------
+
