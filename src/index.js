@@ -1,18 +1,20 @@
 // Function to validate credit card number using Luhn algorithm
 function validateCreditCardNumber(cardNumber) {
-    const regex = new RegExp("^[0-9]{16}$");
+    const regex = new RegExp("^[0-9]{13,19}$");
     if (!regex.test(cardNumber)) return false;
 
     let sum = 0;
-    for (let i = 0; i < cardNumber.length; i++) {
-        let intVal = parseInt(cardNumber.substr(i, 1));
-        if (i % 2 === 0) {
+    let shouldDouble = false;
+    for (let i = cardNumber.length - 1; i >= 0; i--) {
+        let intVal = parseInt(cardNumber.charAt(i));
+        if (shouldDouble) {
             intVal *= 2;
             if (intVal > 9) {
                 intVal = 1 + (intVal % 10);
             }
         }
         sum += intVal;
+        shouldDouble = !shouldDouble;
     }
     return (sum % 10) === 0;
 }
@@ -37,7 +39,7 @@ function getCardIssuer(cardNumber) {
 }
 
 // Example usage
-const cardNumber = '4111111111d111111'; // Replace with actual card number
+const cardNumber = '36139917398467'; // Teste cartão Diners Club - Resultado: Válido
 if (validateCreditCardNumber(cardNumber)) {
     console.log('Número de cartão válido');
     console.log('Emissor do cartão (Bandeira):', getCardIssuer(cardNumber));
