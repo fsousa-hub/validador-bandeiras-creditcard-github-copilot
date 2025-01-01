@@ -144,3 +144,10 @@ Aura: /^50[0-9]{14,17}$/
 
 ----------
 
+### Tecnologias Utilizadas
+
+- ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-blue)
+- ![IA Generativa](https://img.shields.io/badge/IA%20Generativa-green)
+- ![Engenharia de Prompt](https://img.shields.io/badge/Engenharia%20de%20Prompt-orange)
+- ![Inteligência Artificial (IA)](https://img.shields.io/badge/Intelig%C3%AAncia%20Artificial%20(IA)-purple)
+- ![JavaScript](https://img.shields.io/badge/JavaScript-yellow)
